@@ -33,7 +33,7 @@ df = json_normalize(data, sep = "_").assign(match_id = file_name[:-5])
 shots = df.loc[df['type_name'] == 'Shot'].set_index('id')
     
 #Draw the pitch
-from FCPython import createPitch
+from FCPython import createPitch   #Here instead of FCPython use Pitch as we changed the name of the file.
 (fig,ax) = createPitch(pitchLengthX,pitchWidthY,'yards','gray')
 
 #Plot the shots
